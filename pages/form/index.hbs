@@ -1,0 +1,27 @@
+<form>
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            
+            <div class="cell medium-16">
+                <fieldset class="fieldset">
+                    <legend>Conponent Name</legend>
+                    {{#each form}}
+                        {{#if (like @key 'cp-.*')}}
+                            {{#each this}}
+                            {{> data-fieldset}}
+                            {{/each}}
+                        {{else}}
+                            {{> data-fieldset}}
+                        {{/if}}
+                    {{/each}}
+                </fieldset>
+            </div>
+            
+            <div class="cell medium-8">
+                {{#if form.config}}
+                {{> config-fieldset}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,19 @@
+<main class="index-page">
+    <section class="grid-container">
+        <div class="grid-x grid-padding-x">
+            {{#each pages}}
+            <div class="cell small-24 medium-12 large-8">
+                {{#if childPage}}
+                <h5>{{pageName}}</h5>
+                <ul>
+                    {{#each page}}
+                    <li><a href="{{url}}">{{name}}</a></li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+                <a href="{{url}}">{{name}}</a>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</main>
