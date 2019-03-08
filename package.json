@@ -1,0 +1,28 @@
+{
+  "name": "dynamic",
+  "version": "0.0.1",
+  "description": "A power full tool to convert handelbar templates to cms managed website.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankajanupam/dynamic.git"
+  },
+  "keywords": [
+    "cms",
+    "dynamic",
+    "static site generator"
+  ],
+  "author": "Pankaj Anupam <mymail.anupam@gmail.com> (http://pankajanupam.in/)",
+  "contributors": [
+    "Shivani Anupam"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pankajanupam/dynamic/issues"
+  },
+  "homepage": "https://github.com/pankajanupam/dynamic#readme"
+}
