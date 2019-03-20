@@ -21,8 +21,13 @@
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.4",
     "body-parser": "^1.18.3",
+    "browser-sync": "^2.26.3",
     "cpx": "^1.5.0",
-    "hbs": "git+https://github.com/pankajanupam/hbs.git"
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "hbs": "git+https://github.com/pankajanupam/hbs.git",
+    "nodemon": "^1.18.10"
   },
   "babel": {
     "presets": [
