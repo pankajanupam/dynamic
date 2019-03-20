@@ -49,7 +49,7 @@ app.set('views', __dirname + '/pages/');
 app.use('/', router);
 
 export default function (host = '127.0.0.1', port = 3000, cb = () => { }) {
-    app.listen(port, hostname, () => {
-        console.log(`Server running at http://${hostname}:${port}/`);
+    app.listen(port, host, () => {
+        console.log(`Server running at http://${host}:${port}/`);
     });
 };
