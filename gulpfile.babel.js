@@ -1,9 +1,8 @@
 /* eslint-disable */
 'use strict';
 
-import plugins from 'gulp-load-plugins';
-import browserSync from 'browser-sync';
 import gulp from 'gulp';
+import browserSync from 'browser-sync';
 import nodemon from 'nodemon';
 
 gulp.task('nodemon', function (cb) {
@@ -18,10 +17,10 @@ gulp.task('nodemon', function (cb) {
     });
   
     nodemon({
-      exec: 'babel-node lib/server.js',
+      exec: 'babel-node ./init.js',
       ext: 'js hbs',
       ignore: ['dist/'],
-      watch: ['./src/admin/'],
+      watch: ['./'],
       env: {
         'NODE_ENV': 'development'
       }
