@@ -22,7 +22,7 @@ hbs.registerHelper('like', function (value, regexStr) {
     return (new RegExp(regexStr)).test(value);
 });
 
-hbs.registerHelper('ifequal', function(a, b, opts) {
+hbs.registerHelper('ifequal', function (a, b, opts) {
     if (a == b) {
         return opts.fn(this)
     } else {
@@ -48,9 +48,8 @@ app.set('views', __dirname + '/pages/');
 // app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', router);
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
-app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+export default function (host = '127.0.0.1', port = 3000, cb = () => { }) {
+    app.listen(port, hostname, () => {
+        console.log(`Server running at http://${hostname}:${port}/`);
+    });
+};
