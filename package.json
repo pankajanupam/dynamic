@@ -1,6 +1,6 @@
 {
   "name": "potent-cms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A power full tool to convert handelbar templates to cms managed website.",
   "main": "lib/server.js",
   "scripts": {
