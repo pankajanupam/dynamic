@@ -2,9 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import parser from '../utils/parser.js';
 import getFormJson from '../utils/parser/getFormJson';
+import service from '../service';
 
 export default function (req, res) {
-    let filePath = path.join(__dirname, `../../components/${req.params.cpid}/${req.params.cpid}.hbs`);
+    let filePath = `${service.themepath}/${req.params.cpid}/${req.params.cpid}.hbs`;
 
     fs.readFile(filePath, { encoding: 'utf-8' }, function (err, data) {
         if (!err) {

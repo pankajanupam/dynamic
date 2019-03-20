@@ -5,6 +5,7 @@ import express from 'express';
 import hbs from 'hbs';
 //custom
 import router from './router.config';
+import service from './service'; // TODO: find more clean way
 
 // initialize our express app
 const app = express();
@@ -50,9 +51,10 @@ app.use('/', router);
  * init funtion
  * @param {*} settings host = '127.0.0.1', port = 3000, cb = () => { }
  */
-export default function (host = '127.0.0.1', port = 3000, themepath = '', cb = () => { }) {
+export default function server(host = '127.0.0.1', port = 3000, themepath = '', cb = () => { }) {
+    service.themepath = themepath;
+    console.log(themepath);
     app.listen(port, host, () => {
-        app.set('theme-hbs', themepath);
         console.log(`Server running at http://${host}:${port}/`);
     });
 };

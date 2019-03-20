@@ -1,4 +1,5 @@
 import path from 'path';
+import service from '../../service';
 // import walk from 'walk';
 var walk = require('walk').walk;
 
@@ -11,8 +12,7 @@ export default function (req, res) {
             "page": []
         }]
     };
-
-    walk(path.join(__dirname, '../../../components/')).on('file', function (root, stat, next) {
+    walk(service.themepath).on('file', function (root, stat, next) {
         ((filepath, done) => {
             if (/\.(html|hbs)$/.test(filepath)) {
                 let fileName = path.basename(filepath).slice(0, -(path.extname(filepath).length));
