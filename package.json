@@ -2,10 +2,32 @@
   "name": "potent-cms",
   "version": "0.0.1",
   "description": "A power full tool to convert handelbar templates to cms managed website.",
-  "main": "server.js",
+  "main": "lib/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "npm run copy | node lib/server.js",
+    "prepare": "babel src --out-dir lib",
+    "copy": "cpx \"src/**/*.hbs\" lib/"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.14"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "body-parser": "^1.18.3",
+    "cpx": "^1.5.0",
+    "hbs": "git+https://github.com/pankajanupam/hbs.git"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "repository": {
     "type": "git",
