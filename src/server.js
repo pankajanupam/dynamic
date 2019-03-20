@@ -1,5 +1,4 @@
 // builtin
-import fs from 'fs';
 import path from 'path';
 // 3rd party
 import express from 'express';
@@ -47,9 +46,13 @@ app.set('views', __dirname + '/pages/');
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', router);
-
-export default function (host = '127.0.0.1', port = 3000, cb = () => { }) {
+/**
+ * init funtion
+ * @param {*} settings host = '127.0.0.1', port = 3000, cb = () => { }
+ */
+export default function (host = '127.0.0.1', port = 3000, themepath = '', cb = () => { }) {
     app.listen(port, host, () => {
+        app.set('theme-hbs', themepath);
         console.log(`Server running at http://${host}:${port}/`);
     });
 };
