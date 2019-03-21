@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "mongoose": "^5.4.14"
+    "mongoose": "^5.4.14",
+    "foundation-sites": "^6.5.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -26,6 +27,7 @@
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.4.0",
     "hbs": "git+https://github.com/pankajanupam/hbs.git",
     "nodemon": "^1.18.10"
   },

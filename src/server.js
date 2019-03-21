@@ -10,7 +10,7 @@ import service from './service'; // TODO: find more clean way
 // initialize our express app
 const app = express();
 
-app.use(express.static(path.join(__dirname, '../../dist/assets/')));
+app.use(express.static(path.join(__dirname, '../dist/assets/')));
 
 hbs.registerHelper('json', function (options) {
     return JSON.stringify(options);
