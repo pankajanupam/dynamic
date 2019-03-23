@@ -1,10 +1,16 @@
-<form>
+<form action="/cp/cp-title" method="post">
     <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell text-right">
+                <button type="button" class="button">Preview</button>
+                <button type="submit" class="button">Save</button>
+            </div>
+        </div>
         <div class="grid-x grid-margin-x">
             
             <div class="cell medium-16">
                 <fieldset class="fieldset">
-                    <legend>Conponent Name</legend>
+                    <legend>{{componentName}}</legend>
                     {{#each form}}
                         {{#if (like @key 'cp-.*')}}
                             {{#each this}}
@@ -21,6 +27,12 @@
                 {{#if form.config}}
                 {{> config-fieldset}}
                 {{/if}}
+            </div>
+        </div>
+        <div class="grid-x grid-margin-x">
+            <div class="cell text-right">
+                <button type="button" class="button">Preview</button>
+                <button type="submit" class="button">Save</button>
             </div>
         </div>
     </div>

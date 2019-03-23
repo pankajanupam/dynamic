@@ -3,6 +3,7 @@ import path from 'path';
 // 3rd party
 import express from 'express';
 import hbs from 'hbs';
+import bodyParser from "body-parser";
 //custom
 import router from './router.config';
 import service from './service'; // TODO: find more clean way
@@ -43,9 +44,9 @@ app.set('view options', { layout: 'layout' });
 
 app.set('views', __dirname + '/pages/');
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', router);
 /**
  * init funtion
